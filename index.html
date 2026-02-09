@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study Task Mini</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div>
+        <h1>Study Task Mini</h1>
+        <p class="sub">やることを軽く管理するページ（localStorage対応）</p>
+      </div>
+      <button id="themeBtn" class="btn ghost" type="button">🌙</button>
+    </header>
+
+    <section class="card">
+      <div class="row">
+        <input id="taskInput" class="input" type="text" placeholder="タスクを入力（例：HTTP復習）" />
+        <button id="addBtn" class="btn" type="button">追加</button>
+      </div>
+
+      <div class="row between wrap">
+        <div class="filters">
+          <button class="btn small ghost" data-filter="all" type="button">All</button>
+          <button class="btn small ghost" data-filter="active" type="button">Active</button>
+          <button class="btn small ghost" data-filter="done" type="button">Done</button>
+        </div>
+        <div class="stats">
+          <span id="statTotal">Total: 0</span>
+          <span id="statDone">Done: 0</span>
+        </div>
+      </div>
+
+      <ul id="list" class="list"></ul>
+
+      <div class="row between wrap">
+        <small class="hint">※ Enterで追加できます。削除もOK。</small>
+        <button id="clearDoneBtn" class="btn small danger" type="button">Doneを削除</button>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <small>Made for class / HTML・CSS・JS</small>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
