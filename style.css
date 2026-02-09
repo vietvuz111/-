@@ -1,0 +1,103 @@
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --btn:#111827;
+  --btnText:#ffffff;
+  --danger:#ef4444;
+}
+
+body.dark{
+  --bg:#0b1220;
+  --card:#111a2e;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --line:#24324d;
+  --btn:#e5e7eb;
+  --btnText:#0b1220;
+  --danger:#fb7185;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.app{max-width:720px; margin:24px auto; padding:0 14px;}
+.top{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px;}
+h1{margin:0; font-size:26px;}
+.sub{margin:6px 0 0; color:var(--muted); font-size:13px;}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:14px;
+}
+
+.row{display:flex; gap:10px; align-items:center; margin:10px 0;}
+.between{justify-content:space-between;}
+.wrap{flex-wrap:wrap;}
+
+.input{
+  flex:1;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:transparent;
+  color:var(--text);
+  outline:none;
+}
+
+.btn{
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid var(--btn);
+  background:var(--btn);
+  color:var(--btnText);
+  cursor:pointer;
+}
+.btn.small{padding:7px 10px; border-radius:9px; font-size:13px;}
+.btn.ghost{
+  background:transparent;
+  color:var(--text);
+  border:1px solid var(--line);
+}
+.btn.danger{
+  background:transparent;
+  color:var(--danger);
+  border:1px solid var(--danger);
+}
+
+.filters{display:flex; gap:8px; flex-wrap:wrap;}
+.stats{display:flex; gap:12px; color:var(--muted); font-size:13px;}
+
+.list{list-style:none; padding:0; margin:10px 0 0;}
+.item{
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  padding:10px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  margin-bottom:8px;
+}
+.left{display:flex; align-items:center; gap:10px; min-width:0;}
+.text{
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.text.done{color:var(--muted); text-decoration:line-through;}
+.del{
+  border:1px solid var(--line);
+  background:transparent;
+  color:var(--muted);
+  padding:6px 9px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.hint{color:var(--muted)}
+.foot{margin-top:12px; color:var(--muted); text-align:center;}
